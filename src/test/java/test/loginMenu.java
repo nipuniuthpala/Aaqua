@@ -51,7 +51,7 @@ public class loginMenu extends base {
         softAssert.assertTrue(logout1);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElementByXPath(txtLogOut()).click();
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         String logout=driver.findElementById(popUp()).getText();
         softAssert.assertEquals(logout,dataProvider.msgLogOut());
         softAssert.assertAll();
