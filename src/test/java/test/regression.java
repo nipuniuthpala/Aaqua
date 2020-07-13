@@ -95,9 +95,8 @@ public class regression  extends base{
         driver.findElementById(btnMinimize()).click();
         driver.findElementById(login()).click();
         driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
-        y.press( 1306,  516).moveTo(  1300, 1120).release().perform();
-       boolean login=driver.findElementByAndroidUIAutomator(btnLogin()).isEnabled();
-        softAssert.assertFalse(login);
+        boolean login=driver.findElementByAndroidUIAutomator(btnLogin()).isEnabled();
+        softAssert.assertTrue(login);
         softAssert.assertAll();
 
     }
@@ -107,7 +106,7 @@ public class regression  extends base{
 
         driver.findElementById(btnClose()).click();
         driver.findElementById(login()).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         boolean Markdown=driver.findElementByAndroidUIAutomator(markdown()).isEnabled();
         softAssert.assertTrue(Markdown);
         softAssert.assertAll();
@@ -138,6 +137,7 @@ public class regression  extends base{
         driver.findElementByAndroidUIAutomator(btnCarousal()).click();
         driver.findElementByAndroidUIAutomator(btnMoreDetails()).click();
         driver.pressKeyCode(AndroidKeyCode.BACK);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         y.press( 1249, 1388).moveTo( 305, 1399).release().perform();
         driver.findElementByAndroidUIAutomator(btnMoreDetails()).click();
         driver.pressKeyCode(AndroidKeyCode.BACK);
@@ -165,6 +165,7 @@ public class regression  extends base{
         driver.findElementById(btnClose()).click();
         driver.findElementById(login()).click();
         driver.findElementByAndroidUIAutomator(btnImage()).click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         boolean image=driver.findElementByClassName(viewImage()).isDisplayed();
         softAssert.assertTrue(image);
         softAssert.assertAll();
@@ -176,10 +177,12 @@ public class regression  extends base{
         driver.findElementById(btnClose()).click();
         driver.findElementById(login()).click();
         driver.findElementByAndroidUIAutomator(btnInputDisable()).click();
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         boolean text=driver.findElementById(textArea()).isEnabled();
         softAssert.assertFalse(text);
         driver.findElementById(btnMinimize()).click();
         driver.findElementById(login()).click();
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         boolean text1=driver.findElementById(textArea()).isEnabled();
         softAssert.assertFalse(text1);
         String text3=driver.findElementByAndroidUIAutomator(txtInputDisable()).getText();
@@ -198,6 +201,7 @@ public class regression  extends base{
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElementByXPath(username()).click();
         driver.findElementByXPath(username()).sendKeys(dataProvider.email());
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.pressKeyCode(AndroidKeyCode.BACK);
         driver.findElementByXPath(password()).click();
         driver.pressKeyCode(AndroidKeyCode.BACK);
@@ -208,11 +212,12 @@ public class regression  extends base{
         String text3=driver.findElementById(popUp()).getText();
         softAssert.assertEquals(text3,dataProvider.msgWelcome());
         driver.findElementById(hamburgMenu()).click();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         boolean logout1=driver.findElementByXPath(txtLogOut()).isEnabled();
         softAssert.assertTrue(logout1);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.findElementByXPath(txtLogOut()).click();
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         String logout=driver.findElementById(popUp()).getText();
         softAssert.assertEquals(logout,dataProvider.msgLogOut());
         softAssert.assertAll();
@@ -230,6 +235,7 @@ public class regression  extends base{
         String value=driver.findElementByAndroidUIAutomator(btnOption()).getText();
         softAssert.assertEquals(value,dataProvider.option());
         driver.findElementByAndroidUIAutomator(backToTop()).click();
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         boolean markdown=driver.findElementByAndroidUIAutomator(markdown()).isDisplayed();
         softAssert.assertTrue(markdown);
         softAssert.assertAll();
@@ -244,6 +250,7 @@ public class regression  extends base{
         driver.findElementById(textArea()).sendKeys(dataProvider.input());
         driver.findElementById(btnSuggestion()).click();
         driver.findElementById(btnEnter()).click();
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         String text=  driver.findElementByAndroidUIAutomator(txtSuggestion()).getText();
         softAssert.assertEquals(text,dataProvider.outputTxt());
         softAssert.assertAll();
@@ -255,6 +262,7 @@ public class regression  extends base{
         driver.findElementById(btnClose()).click();
         driver.findElementById(login()).click();
         driver.findElementByAndroidUIAutomator(btnVideo()).click();
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         boolean video=driver.findElementByClassName(viewVideo()).isDisplayed();
         softAssert.assertTrue(video);
         softAssert.assertAll();
