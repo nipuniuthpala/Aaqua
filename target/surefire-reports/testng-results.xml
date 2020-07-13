@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="15" passed="15">
+  <reporter-output>
+  </reporter-output>
+  <suite name="mobileautomation" duration-ms="124423" started-at="2020-07-11T11:19:46Z" finished-at="2020-07-11T11:21:50Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="124423" started-at="2020-07-11T11:19:46Z" finished-at="2020-07-11T11:21:50Z">
+      <class name="test.regression">
+        <test-method status="PASS" signature="Login()[pri:0, instance:test.regression@8317c52]" name="Login" is-config="true" duration-ms="3430" started-at="2020-07-11T11:19:46Z" description="Load the Device" finished-at="2020-07-11T11:19:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="selectMarkDownAndClickOnLink()[pri:1, instance:test.regression@8317c52]" name="selectMarkDownAndClickOnLink" duration-ms="7627" started-at="2020-07-11T11:19:49Z" description="verify select Markdown and check link" finished-at="2020-07-11T11:19:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectMarkDownAndClickOnLink -->
+        <test-method status="PASS" signature="selectMarkDownAndVerifyOnImage()[pri:2, instance:test.regression@8317c52]" name="selectMarkDownAndVerifyOnImage" duration-ms="7137" started-at="2020-07-11T11:19:57Z" description="verify select Markdown and verify Image" finished-at="2020-07-11T11:20:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectMarkDownAndVerifyOnImage -->
+        <test-method status="PASS" signature="clickBackToTheTop()[pri:3, instance:test.regression@8317c52]" name="clickBackToTheTop" duration-ms="4492" started-at="2020-07-11T11:20:04Z" description="verify click back to the top" finished-at="2020-07-11T11:20:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickBackToTheTop -->
+        <test-method status="PASS" signature="typeTopCommand()[pri:4, instance:test.regression@8317c52]" name="typeTopCommand" duration-ms="3016" started-at="2020-07-11T11:20:09Z" description="verify type top command and verify the list" finished-at="2020-07-11T11:20:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- typeTopCommand -->
+        <test-method status="PASS" signature="minimizeMaximize()[pri:5, instance:test.regression@8317c52]" name="minimizeMaximize" duration-ms="4156" started-at="2020-07-11T11:20:12Z" description="verify minimize the app and maximizes the app shows previous text is disabled" finished-at="2020-07-11T11:20:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- minimizeMaximize -->
+        <test-method status="PASS" signature="closeApp()[pri:6, instance:test.regression@8317c52]" name="closeApp" duration-ms="4659" started-at="2020-07-11T11:20:16Z" description="verify close the app and opens the app" finished-at="2020-07-11T11:20:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+        <test-method status="PASS" signature="selectAdaptiveCard()[pri:7, instance:test.regression@8317c52]" name="selectAdaptiveCard" duration-ms="12518" started-at="2020-07-11T11:20:20Z" description="verify adaptiveCard" finished-at="2020-07-11T11:20:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectAdaptiveCard -->
+        <test-method status="PASS" signature="selectCarousal()[pri:8, instance:test.regression@8317c52]" name="selectCarousal" duration-ms="13523" started-at="2020-07-11T11:20:33Z" description="verify select carousal and check link" finished-at="2020-07-11T11:20:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectCarousal -->
+        <test-method status="PASS" signature="selectCSAT()[pri:9, instance:test.regression@8317c52]" name="selectCSAT" duration-ms="6203" started-at="2020-07-11T11:20:46Z" description="verify csat" finished-at="2020-07-11T11:20:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectCSAT -->
+        <test-method status="PASS" signature="selectImage()[pri:10, instance:test.regression@8317c52]" name="selectImage" duration-ms="5994" started-at="2020-07-11T11:20:53Z" description="verify image" finished-at="2020-07-11T11:20:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectImage -->
+        <test-method status="PASS" signature="selectInputDisable()[pri:11, instance:test.regression@8317c52]" name="selectInputDisable" duration-ms="7821" started-at="2020-07-11T11:20:59Z" description="verify inputDisable" finished-at="2020-07-11T11:21:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectInputDisable -->
+        <test-method status="PASS" signature="verifyLogin()[pri:12, instance:test.regression@8317c52]" name="verifyLogin" duration-ms="17513" started-at="2020-07-11T11:21:06Z" description="verify login" finished-at="2020-07-11T11:21:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method status="PASS" signature="selectPullDown()[pri:13, instance:test.regression@8317c52]" name="selectPullDown" duration-ms="11195" started-at="2020-07-11T11:21:24Z" description="verify PullDown" finished-at="2020-07-11T11:21:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectPullDown -->
+        <test-method status="PASS" signature="verifySuggestions()[pri:14, instance:test.regression@8317c52]" name="verifySuggestions" duration-ms="6944" started-at="2020-07-11T11:21:35Z" description="verify suggestions" finished-at="2020-07-11T11:21:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySuggestions -->
+        <test-method status="PASS" signature="selectVideo()[pri:15, instance:test.regression@8317c52]" name="selectVideo" duration-ms="7211" started-at="2020-07-11T11:21:42Z" description="verify select video " finished-at="2020-07-11T11:21:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectVideo -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:test.regression@8317c52]" name="quit" is-config="true" duration-ms="955" started-at="2020-07-11T11:21:49Z" description="Quit Device" finished-at="2020-07-11T11:21:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- test.regression -->
+    </test> <!-- Test -->
+  </suite> <!-- mobileautomation -->
+</testng-results>
