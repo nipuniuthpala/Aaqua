@@ -38,6 +38,7 @@ public class carousal extends base {
         driver.findElementByAndroidUIAutomator(btnCarousal()).click();
         driver.findElementByAndroidUIAutomator(btnMoreDetails()).click();
         driver.pressKeyCode(AndroidKeyCode.BACK);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         y.press( 1249, 1388).moveTo( 305, 1399).release().perform();
         driver.findElementByAndroidUIAutomator(btnMoreDetails()).click();
         driver.pressKeyCode(AndroidKeyCode.BACK);
