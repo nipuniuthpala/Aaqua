@@ -91,10 +91,10 @@ public class markdown extends base {
 
         driver.findElementById(btnMinimize()).click();
         driver.findElementById(login()).click();
-        driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         y.press( 1306,  516).moveTo(  1300, 1120).release().perform();
         boolean login=driver.findElementByAndroidUIAutomator(btnLogin()).isEnabled();
-        softAssert.assertFalse(login);
+        softAssert.assertTrue(login);
         softAssert.assertAll();
 
     }
