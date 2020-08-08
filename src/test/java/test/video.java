@@ -1,38 +1,34 @@
 package test;
 
 
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
+import functions.login;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import page.base;
 
 import java.net.MalformedURLException;
-import java.util.concurrent.TimeUnit;
 
-public class video extends base {
 
-    AndroidDriver<AndroidElement> driver= capabilities();
+public class video extends login {
+
+
+    SoftAssert softAssert = new SoftAssert();
 
     public video() throws MalformedURLException {
     }
-    SoftAssert softAssert = new SoftAssert();
 
     @BeforeClass(description = "Load the Device", alwaysRun = true)
     public void Login () {
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.findElementById(login()).click();
-        driver.findElementById(getPermission()).click();
+      login();
     }
 
     @Test(description = "verify select video ", alwaysRun = true, priority = 1)
-    public void selectVideo() {
+    public void verifySelectVideo() {
 
-        driver.findElementByAndroidUIAutomator(btnVideo()).click();
-        boolean video=driver.findElementByClassName(viewVideo()).isDisplayed();
+        selectVideo();
+        boolean video=viewVideoLocation();
         softAssert.assertTrue(video);
         softAssert.assertAll();
 
@@ -40,6 +36,6 @@ public class video extends base {
 
     @AfterClass(description = "Quit Device", alwaysRun = true)
     public void quit() {
-        driver.quit();
+        logout();
     }
 }
