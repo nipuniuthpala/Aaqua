@@ -1,12 +1,14 @@
 package page;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.android.AndroidElement;
 
 import dataProvider.dataProvider;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -66,6 +68,7 @@ public class base {
    static String value="text(\"0\")";
    static String btnCalculate="text(\"CALCULATE\")";
    static String valueText="text(\"NZ, 3\")";
+   static String allowButton="com.android.permissioncontroller:id/permission_allow_button";
 
 
     public static  AndroidDriver<AndroidElement> capabilities() throws MalformedURLException{
@@ -80,6 +83,7 @@ public class base {
      capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,dataProvider.AUTOMATION_NAME());
      capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,14);
      capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+     capabilities.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS,true);
      driver = new AndroidDriver<>(new URL(dataProvider.URL()), capabilities);
      return driver;
 
@@ -93,12 +97,16 @@ public class base {
       return fashionText;
   }
 
-    public static String login(){
+    public static String clickLogin(){
         return loginIcon;
     }
 
   public static String getPermission(){
         return permission;
+  }
+
+  public static String clickAllow(){
+        return allowButton;
   }
 
   public static String getImageText(){
