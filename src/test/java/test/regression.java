@@ -83,9 +83,6 @@ public class regression  extends login {
     public void minimizeMaximize() {
         clickBtnMinimize();
         clickLoginBtn();
-        navigateToLogin();
-        boolean login=loginEnabled();
-        softAssert.assertTrue(login);
         softAssert.assertAll();
 
     }
@@ -212,6 +209,16 @@ public class regression  extends login {
         selectVideo();
         boolean video=viewVideoLocation();
         softAssert.assertTrue(video);
+        softAssert.assertAll();
+
+    }
+
+    @Test(description = "verify iconMessage", alwaysRun = true, priority = 16)
+    public void VerifyIconMessageLogin() {
+        btnCloseOpen();
+        clickBtnClose();
+        selectIconMessage();
+        displayCarousal();
         softAssert.assertAll();
 
     }
