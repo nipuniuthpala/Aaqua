@@ -42,6 +42,7 @@ public class login extends base {
     }
 
     public boolean loginEnabled(){
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
      return   driver.findElementByAndroidUIAutomator(btnLogin()).isEnabled();
     }
 
@@ -65,6 +66,7 @@ public class login extends base {
     }
 
     public String getAdaptiveCardValue(){
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         return driver.findElementByAndroidUIAutomator( valueText()).getText();
     }
 
@@ -72,7 +74,7 @@ public class login extends base {
         driver.findElementByAndroidUIAutomator(btnCarousal()).click();
         driver.findElementByAndroidUIAutomator(btnMoreDetails()).click();
         driver.pressKeyCode(AndroidKeyCode.BACK);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         y.press( 1249, 1388).moveTo( 305, 1399).release().perform();
         driver.findElementByAndroidUIAutomator(btnMoreDetails()).click();
         driver.pressKeyCode(AndroidKeyCode.BACK);
@@ -119,6 +121,7 @@ public class login extends base {
     }
 
     public String getInputDisableText(){
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         return driver.findElementByAndroidUIAutomator(txtInputDisable()).getText();
     }
 
@@ -139,6 +142,7 @@ public class login extends base {
     }
 
     public String getPopUpMessage(){
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         return  driver.findElementById(popUp()).getText();
     }
 
@@ -169,7 +173,7 @@ public void navigateToMarkdown(){
     public void clickMarkdownLink(){
         WebElement expandList=	 driver.findElementByAndroidUIAutomator(markdown());
         y.tap(tapOptions().withElement(element(expandList))).perform();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         y.press( 1089, 728).moveTo( 1032, 2059).release().perform();
         y.tap( 325, 769).perform();
     }
@@ -241,6 +245,7 @@ public void navigateToMarkdown(){
     }
 
     public boolean markdownIsEnabled() {
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         return  driver.findElementByAndroidUIAutomator(markdown()).isEnabled();
     }
 
@@ -272,6 +277,7 @@ public void navigateToMarkdown(){
 
 
     public String getSuggestionsText(){
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         return   driver.findElementByAndroidUIAutomator(txtSuggestion()).getText();
     }
 
@@ -280,7 +286,14 @@ public void navigateToMarkdown(){
     }
 
     public boolean viewVideoLocation(){
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         return driver.findElementByClassName(viewVideo()).isDisplayed();
+    }
+
+    public void selectIconMessage(){
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        y.tap( 666, 1822).perform();
+
     }
 
 }
