@@ -43,6 +43,7 @@ public class base {
    static String btnMoreDetails="text(\"MORE DETAILS\")";
    static String btnReserve="text(\"RESERVE\")";
    static String btnCSAT="text(\"CSAT\")";
+   static String btnCSATFirst="com.example.ai_answer_android:id/ai_answer_ui_popup_rateview_survey_button";
    static String btnImage="text(\"IMAGE\")";
    static String viewImage="android.widget.ImageView";
    static String btnInputDisable="text(\"INPUT DISABLE\")";
@@ -69,6 +70,10 @@ public class base {
    static String btnCalculate="text(\"CALCULATE\")";
    static String valueText="text(\"NZ, 3\")";
    static String allowButton="com.android.permissioncontroller:id/permission_allow_button";
+   static String btnId="text(\"4\")";
+   static String comment="com.example.ai_answer_android:id/ai_answer_ui_popup_rateview_comment_et";
+   static String btnComment="com.example.ai_answer_android:id/ai_answer_ui_popup_rateview_comment_bt";
+   static String closeThankYou="com.example.ai_answer_android:id/ai_answer_ui_popup_rateview_close";
 
 
     public static  AndroidDriver<AndroidElement> capabilities() throws MalformedURLException{
@@ -163,6 +168,26 @@ public class base {
 
     public static String btnCSAT(){
         return btnCSAT;
+    }
+
+    public static String btnCSATFirst(){
+        return btnCSATFirst;
+    }
+
+    public static String comment(){
+        return comment;
+    }
+
+    public static String btnCSATComment(){
+        return btnComment;
+    }
+
+    public static String closeThankYou(){
+        return closeThankYou;
+    }
+
+    public static String btnId(){
+        return btnId;
     }
 
     public static String btnImage(){
