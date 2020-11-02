@@ -90,6 +90,25 @@ public class login extends base {
         driver.findElementByAndroidUIAutomator(btnCSAT()).click();
     }
 
+    public void  clickCSATFirstScreen(){
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.findElementById(btnCSATFirst()).click();
+        driver.findElementByAndroidUIAutomator(btnId()).click();
+
+    }
+
+    public void  enterCSATComment(){
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.findElementById(comment()).sendKeys("test");
+        driver.findElementById(btnCSATComment()).click();
+
+    }
+
+
+    public void  clickCSATThankYou(){
+        driver.findElementById(closeThankYou()).click();
+    }
+
     public String getCSATText(){
         return  driver.findElementByAndroidUIAutomator(btnCSAT()).getText();
     }
@@ -175,7 +194,7 @@ public void navigateToMarkdown(){
         y.tap(tapOptions().withElement(element(expandList))).perform();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         y.press( 1089, 728).moveTo( 1032, 2059).release().perform();
-        y.tap( 325, 769).perform();
+        y.tap( 1032, 661).perform();
     }
 
 
@@ -292,7 +311,7 @@ public void navigateToMarkdown(){
 
     public void selectIconMessage(){
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        y.tap( 666, 1822).perform();
+        y.tap( 826, 1636).perform();
 
     }
 
