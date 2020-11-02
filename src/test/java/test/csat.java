@@ -37,6 +37,24 @@ public class csat extends login {
 
     }
 
+    @Test(description = "verify click on csat", alwaysRun = true, priority = 2)
+    public void selectCSATScreens() {
+
+        clickCSATFirstScreen();
+        enterCSATComment();
+        softAssert.assertAll();
+
+
+    }
+
+    @Test(description = "verify Thank you message csat", alwaysRun = true, priority = 3)
+    public void selectCSATThankYou() {
+        clickCSATThankYou();
+        softAssert.assertAll();
+
+
+    }
+
     @AfterClass(description = "Quit Device", alwaysRun = true)
     public void quit() {
         logout();
