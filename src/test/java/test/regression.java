@@ -132,7 +132,26 @@ public class regression  extends login {
 
     }
 
-    @Test(description = "verify image", alwaysRun = true, priority = 10)
+
+    @Test(description = "verify click on csat", alwaysRun = true, priority = 10)
+    public void selectCSATScreens() {
+
+        clickCSATFirstScreen();
+        enterCSATComment();
+        softAssert.assertAll();
+
+
+    }
+
+    @Test(description = "verify Thank you message csat", alwaysRun = true, priority = 11)
+    public void selectCSATThankYou() {
+        clickCSATThankYou();
+        softAssert.assertAll();
+
+
+    }
+
+    @Test(description = "verify image", alwaysRun = true, priority = 12)
     public void verifySelectImage() {
         btnCloseOpen();
         clickImage();
@@ -142,7 +161,7 @@ public class regression  extends login {
 
     }
 
-    @Test(description = "verify inputDisable", alwaysRun = true, priority = 11)
+    @Test(description = "verify inputDisable", alwaysRun = true, priority = 13)
     public void selectInputDisable() {
         btnCloseOpen();
         clickInputDisable();
@@ -159,7 +178,7 @@ public class regression  extends login {
     }
 
 
-    @Test(description = "verify login", alwaysRun = true, priority = 12)
+    @Test(description = "verify login", alwaysRun = true, priority = 14)
     public void verifyLogin() {
         btnCloseOpen();
         clickRIDLogin();
@@ -177,7 +196,7 @@ public class regression  extends login {
 
     }
 
-    @Test(description = "verify PullDown", alwaysRun = true, priority = 13)
+    @Test(description = "verify PullDown", alwaysRun = true, priority = 15)
     public void selectPullDown() {
         btnCloseOpen();
         clickPullDown();
@@ -193,7 +212,7 @@ public class regression  extends login {
 
     }
 
-    @Test(description = "verify suggestions", alwaysRun = true, priority = 14)
+    @Test(description = "verify suggestions", alwaysRun = true, priority = 16)
     public void verifySuggestions() {
         btnCloseOpen();
         enterSuggestions();
@@ -203,7 +222,7 @@ public class regression  extends login {
 
     }
 
-    @Test(description = "verify select video ", alwaysRun = true, priority = 15)
+    @Test(description = "verify select video ", alwaysRun = true, priority = 17)
     public void verifySelectVideo() {
         btnCloseOpen();
         selectVideo();
@@ -213,7 +232,7 @@ public class regression  extends login {
 
     }
 
-    @Test(description = "verify iconMessage", alwaysRun = true, priority = 16)
+    @Test(description = "verify iconMessage", alwaysRun = true, priority = 18)
     public void VerifyIconMessageLogin() {
         btnCloseOpen();
         clickBtnClose();
