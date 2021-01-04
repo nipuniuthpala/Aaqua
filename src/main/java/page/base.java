@@ -34,7 +34,7 @@ public class base {
    static String btnBackToTop="new UiScrollable(new UiSelector()).scrollIntoView(text(\"BACK TO THE TOP\"))";
    static String txtBtnBackToTop="text(\"BACK TO THE TOP\")";
    static String txtBackToTop="text(\"Back to the top\")";
-   static String textArea="com.example.ai_answer_android:id/ai_answer_ui_frag_text";
+   static String textArea="com.example.ai_answer_android:id/ai_answer_ui_frag_text_et";
    static String btnEnter="com.example.ai_answer_android:id/ai_answer_ui_frag_text_bt";
    static String btnMinimize="com.example.ai_answer_android:id/ai_answer_ui_frag_tv_minimize";
    static String btnClose="com.example.ai_answer_android:id/ai_answer_ui_frag_tv_close";
@@ -49,9 +49,9 @@ public class base {
    static String btnInputDisable="text(\"INPUT DISABLE\")";
    static String txtInputDisable="text(\"Input has been disabled.\")";
    static String btnRIDLogin="text(\"RID LOGIN\")";
-   static String username="/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.view.View[2]/android.view.View[3]/android.view.View/android.widget.ListView[1]/android.view.View/android.widget.EditText";
-   static String password="/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.view.View[2]/android.view.View[3]/android.view.View/android.widget.ListView[2]/android.view.View/android.widget.EditText";
-   static String webLogin="/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.view.View[2]/android.view.View[3]/android.view.View/android.widget.Button";
+   static String username="/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.view.View[2]/android.view.View[3]/android.view.View/android.widget.ListView[1]/android.view.View/android.widget.EditText";
+   static String password="/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.view.View[2]/android.view.View[3]/android.view.View/android.widget.ListView[2]/android.view.View/android.widget.EditText";
+   static String webLogin="/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.view.View[2]/android.view.View[3]/android.view.View/android.widget.Button";
    static String popup="com.example.ai_answer_android:id/snackbar_text";
    static String hamburgMenu="com.example.ai_answer_android:id/ai_answer_ui_iv_menu";
    static String txtLogOut="/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.TextView";
