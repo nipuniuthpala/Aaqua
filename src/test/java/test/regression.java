@@ -184,12 +184,13 @@ public class regression  extends login {
         clickRIDLogin();
         String text3=getPopUpMessage();
         softAssert.assertEquals(text3,dataProvider.msgWelcome());
+        sleep10();
         clickHambergMenu();
         boolean logout1=getLogoutEnabled();
         softAssert.assertTrue(logout1);
-        sleep5();
+        sleep10();
         clickLogOut();
-        sleep5();
+        sleep10();
         String logout=getPopUpMessage();
         softAssert.assertEquals(logout,dataProvider.msgLogOut());
         softAssert.assertAll();
@@ -237,7 +238,6 @@ public class regression  extends login {
         btnCloseOpen();
         clickBtnClose();
         selectIconMessage();
-        displayCarousal();
         softAssert.assertAll();
 
     }
