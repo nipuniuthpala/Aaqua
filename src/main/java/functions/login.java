@@ -62,6 +62,7 @@ public class login extends base {
         driver.findElementByAndroidUIAutomator(value()).click();
         driver.pressKeyCode(AndroidKeyCode.DEL);
         driver.pressKeyCode(AndroidKeyCode.KEYCODE_3);
+        y.press( 1306, 1234).moveTo( 1316, 893).release().perform();
         driver.findElementByAndroidUIAutomator(btnCalculate()).click();
     }
 
@@ -83,7 +84,8 @@ public class login extends base {
     }
 
     public boolean displayCarousal(){
-        return  driver.findElementByAndroidUIAutomator(btnCarousal()).isEnabled();
+       return driver.findElementByAndroidUIAutomator(btnCarousal()).isEnabled();
+
     }
 
     public void clickCSAT(){
@@ -140,7 +142,7 @@ public class login extends base {
     }
 
     public String getInputDisableText(){
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         return driver.findElementByAndroidUIAutomator(txtInputDisable()).getText();
     }
 
@@ -148,20 +150,21 @@ public class login extends base {
 
         driver.findElementByAndroidUIAutomator(btnLogin()).click();
         driver.findElementByAndroidUIAutomator(btnRIDLogin()).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
         driver.findElementByXPath(username()).click();
         driver.findElementByXPath(username()).sendKeys(dataProvider.email());
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.pressKeyCode(AndroidKeyCode.BACK);
         driver.findElementByXPath(password()).click();
         driver.pressKeyCode(AndroidKeyCode.BACK);
         driver.findElementByXPath(password()).sendKeys(dataProvider.password());
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.findElementByXPath(webLogin()).click();
-        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
     public String getPopUpMessage(){
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         return  driver.findElementById(popUp()).getText();
     }
 
@@ -170,6 +173,7 @@ public class login extends base {
     }
 
     public boolean getLogoutEnabled(){
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         return  driver.findElementByXPath(txtLogOut()).isEnabled();
     }
 
@@ -179,11 +183,12 @@ public class login extends base {
 
 
     public void clickLogOut(){
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.findElementByXPath(txtLogOut()).click();
     }
 
 public void navigateToMarkdown(){
-    driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
     y.press(1301, 547).moveTo(1290,779).release().perform();
     driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 
@@ -194,7 +199,7 @@ public void navigateToMarkdown(){
         y.tap(tapOptions().withElement(element(expandList))).perform();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         y.press( 1089, 728).moveTo( 1032, 2059).release().perform();
-        y.tap( 1032, 661).perform();
+        y.tap( 1048, 903).perform();
     }
 
 
@@ -233,6 +238,7 @@ public void navigateToMarkdown(){
 
 
     public void backToTheTopLocation(){
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         y.press( 1337,  485).moveTo(  1306, 1425).release().perform();
     }
 
@@ -264,7 +270,7 @@ public void navigateToMarkdown(){
     }
 
     public boolean markdownIsEnabled() {
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         return  driver.findElementByAndroidUIAutomator(markdown()).isEnabled();
     }
 
@@ -290,13 +296,14 @@ public void navigateToMarkdown(){
 
     public void enterSuggestions(){
         driver.findElementById(textArea()).sendKeys(dataProvider.input());
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElementById(btnSuggestion()).click();
         driver.findElementById(btnEnter()).click();
     }
 
 
     public String getSuggestionsText(){
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         return   driver.findElementByAndroidUIAutomator(txtSuggestion()).getText();
     }
 
@@ -305,12 +312,12 @@ public void navigateToMarkdown(){
     }
 
     public boolean viewVideoLocation(){
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         return driver.findElementByClassName(viewVideo()).isDisplayed();
     }
 
     public void selectIconMessage(){
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         y.tap( 826, 1636).perform();
 
     }
