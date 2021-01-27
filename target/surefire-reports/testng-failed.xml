@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [mobileautomation]">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [mobileautomation]" parallel="instances">
   <listeners>
     <listener class-name="resources.Listeners"/>
     <listener class-name="resources.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" verbose="0" name="Test(failed)">
+  <test thread-count="5" verbose="0" name="test(failed)" parallel="instances">
     <classes>
       <class name="test.regression">
         <methods>
           <include name="Login"/>
           <include name="quit"/>
-          <include name="minimizeMaximize"/>
-          <include name="selectVideo"/>
+          <include name="selectPullDown"/>
+          <include name="verifySelectVideo"/>
+          <include name="verifyLogin"/>
+          <include name="verifySuggestions"/>
+          <include name="VerifyIconMessageLogin"/>
         </methods>
       </class> <!-- test.regression -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [mobileautomation] -->

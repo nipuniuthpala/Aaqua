@@ -1,7 +1,5 @@
 package resources;
 
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -53,8 +51,7 @@ public class ExtentReporterNG implements IReporter {
             for (ITestResult result : tests.getAllResults()) {
                 test = extent.createTest(result.getMethod().getMethodName());
 
-                /*test.getTest(). = getTime(result.getStartMillis());
-                test.getTest().endedTime = getTime(result.getEndMillis());*/
+
 
                 for (String group : result.getMethod().getGroups())
                     test.assignCategory(group);
@@ -66,14 +63,10 @@ public class ExtentReporterNG implements IReporter {
 
                 test.log(status, message);
 
-                //      extent.endTest(test);
+
             }
         }
     }
 
-    private Date getTime(long millis) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(millis);
-        return calendar.getTime();
-    }
+
 }

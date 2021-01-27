@@ -1,15 +1,14 @@
 package resources;
-
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import page.base;
-
-import java.io.IOException;
+import page.InstagramTestBase;
 
 
 
-public class Listeners implements ITestListener{
+
+
+public class Listeners implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult result) {
@@ -29,12 +28,7 @@ public class Listeners implements ITestListener{
         // TODO Auto-generated method stub
         //screenshot
         String s=result.getName();
-        try {
-            base.getScreenshot(s);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+        InstagramTestBase.takeScreenshot(s);
 
 
     }

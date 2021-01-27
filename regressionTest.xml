@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="mobileautomation" verbose="10"  parallel="instances">
+<suite name="Aaqua" verbose="10"  parallel="instances">
     <listeners>
         <listener class-name="resources.Listeners"/>
         <listener class-name="resources.ExtentReporterNG"/>
@@ -9,7 +9,7 @@
 
     <test name="test" >
         <classes>
-            <class name="test.regression"/>
+            <class name="test.testInstagram"/>
         </classes>
     </test>
 </suite>
